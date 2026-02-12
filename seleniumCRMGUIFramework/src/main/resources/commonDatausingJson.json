@@ -1,0 +1,8 @@
+{
+	"browser" : "chrome",
+	"url" : "https://demoqa.com/automation-practice-form",
+	"firstname" : "kaustubh",
+	"lastname" :  "patil" ,
+	"email" : "kp@gmail.com" ,
+	"timeout" : 15
+}

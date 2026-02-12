@@ -1,0 +1,23 @@
+SVG Tag : 
+	The <svg> tag is mainly used to create scalable graphics such as icons, logos, charts,
+	shapes, animations, diagrams, and interactive visuals that remain sharp on all screen 
+	sizes unlike normal images.
+	
+Common svg elements : 
+| Element     | Purpose                      |
+| ----------- | ---------------------------- |
+|  <circle>   | Draws a circle               |
+|  <rect>     | Draws a rectangle            |
+|  <line>     | Draws a line                 |
+|  <polygon>  | Draws shapes with many sides |
+|  <path>     | Draws complex shapes         |
+|  <text>     | Displays text                |
+
+
+Automating SVG elements in Selenium is slightly different from normal HTML elements because 
+SVG elements do not behave like standard DOM tags.
+
+Normal locators like //svg or //circle often do not work directly.
+
+local-name() in XPath : //*[local-name()='svg']
+						//*[local-name()='svg']//*[local-name()='path']

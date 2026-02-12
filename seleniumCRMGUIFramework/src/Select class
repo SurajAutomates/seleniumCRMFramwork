@@ -1,0 +1,23 @@
+Select tag: 
+	In HTML, the <select> tag is used to create a dropdown list.
+	The choices inside it are defined using <option> tags.
+	
+Select class in Selenium :
+	In Selenium, the Select class is used to handle dropdown elements created using the HTML <select> tag.
+	Selenium cannot directly select dropdown options like normal elements, so it provides the Select class
+	to handle them easily.
+	
+Steps to Use Select Class : 
+	Locate the dropdown element.
+	Create a Select object.
+	Select option using available methods.
+	
+Some important methods:
+| Method                  | Description                          |
+| ----------------------- | ------------------------------------ |
+|  selectByVisibleText()  | Select using displayed text          |
+|  selectByValue()        | Select using value attribute         |
+|  selectByIndex()        | Select using option index            |
+|  getOptions()           | Get all dropdown options             |
+|  isMultiple()           | Check if multiple selection allowed  |
+|  deselectAll()          | Deselect options (multi-select only) |

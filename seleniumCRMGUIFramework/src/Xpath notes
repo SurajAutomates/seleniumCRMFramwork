@@ -1,0 +1,49 @@
+Xpath : 
+	xpath means xml path of the web element.
+	complete path of web element in html page.
+	
+types of xpath :
+	1. absolute xpath (The complete path of webelement in page.)
+	2. relative xpath (Anywhere in DOM / html )
+
+# absolute xpath : 
+	starts from the root of the HTML document and goes step-by-step to the element.
+	starts with /childnode/childnode/childnode/......
+	if there are duplicates so we go with indexing , index value starts from 1
+	indexing is given in []
+	
+When can we go for Absolute XPath? 
+	Page structure is fixed
+	Quick testing or temporary automation
+	No unique attributes available
+
+tip: 
+	Absolute XPath is like giving the full address from 
+	country → state → city → street → house. 
+	If anything changes, the address breaks.	
+	
+
+# relative xpath
+	We use Relative XPath in most real-time automation because it is flexible and stable.
+	Relative XPath starts with // and searches the element anywhere in the page instead 
+	of from the root.	
+
+Relative XPath — Basic Syntax : 
+	Using Attribute :  //tagname[@attribute='value']
+	Using Multiple Attributes : //tagname[@attr1='value1' and @attr2='value2']
+	Using contains() (partial match) : //tagname[contains(@attribute,'value')]
+	Using Text : //tagname[text()='text value']
+	Using Partial Text : //tagname[contains(text(),'text')]
+	Using starts-with() : //tagname[starts-with(@attribute,'value')]
+	ancestor in XPath : //tagname[@attribute='value']/../.. OR //childtag/ancestor::parenttag
+		ancestor selects all parent elements of the current element.
+	descendant in XPath : //parenttag/descendant::childtag
+		descendant selects all child elements inside a parent, at any level.
+	following-sibling : //tagname[@attribute='value']/following-sibling::siblingtag
+		all sibling elements that come after the current element.
+	preceding-sibling : //tagname[@attribute='value']/preceding-sibling::siblingtag
+		all sibling elements that come before the current element.
+	
+	
+		
+	

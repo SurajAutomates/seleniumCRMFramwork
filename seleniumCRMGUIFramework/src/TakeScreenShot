@@ -1,0 +1,30 @@
+TakeScreenShot :
+	TakesScreenshot is a built-in Java interface you use when you want to take screenshots of the browser 
+	during automated tests.
+	
+How It Works ? 
+1. Cast your WebDriver instance to TakesScreenshot (because WebDriver itself doesn’t include the screenshot method):
+	TakesScreenshot screenshot = (TakesScreenshot) driver;
+	
+2. Capture the screenshot using getScreenshotAs() and specify an output type:
+	File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+	
+3. Save the screenshot to disk using file handling utilities like FileUtils.copyFile()
+	File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	File destFile = new File("screenshot.png");
+
+	// Save the file
+	FileUtils.copyFile(srcFile, destFile);	
+	
+
+JavaScriptExecutor : 
+	JavaScriptExecutor is an interface in Selenium WebDriver that lets you run raw JavaScript code inside the browser
+	while your automation test is running. It’s especially helpful when normal WebDriver commands (like click() or 
+	sendKeys()) don’t work on a web page due to dynamic elements, overlays, or complex scripts.	
+	
+Main Methods: 	
+executeScript(String script, Object... args)
+	Runs synchronous JavaScript and can return values (like title, text, numbers, elements).
+
+executeAsyncScript(String script, Object... args)
+	Runs asynchronous JavaScript where you must signal completion via a callback (useful for AJAX waits).
